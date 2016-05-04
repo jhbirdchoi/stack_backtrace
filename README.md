@@ -15,16 +15,16 @@
 
 >
 	high addr
-        --------------------------
-        frame1
-              <R0, .. R10>  (可选)
-              R14  (返回地址)
-        frame2
-               <R0, .. R10>  (可选)
-              R14   (返回地址)
-            ...............
-        --------------------------
-    low addr
+	--------------------------
+		frame1
+			<R0, .. R10>  (可选)
+			R14  (返回地址)
+		frame2
+			<R0, .. R10>  (可选)
+			R14   (返回地址)
+		...............
+	--------------------------
+	low addr
 
 
 * 由于这样的stack信息不足，不像X86体系，无SP信息。
@@ -33,7 +33,7 @@
 ## 使用例子
 
 >
-python stackBacktrace.py exam/map.txt exam/stack.tx
+	python stackBacktrace.py exam/map.txt exam/stack.tx
 
 可能的结果
 
