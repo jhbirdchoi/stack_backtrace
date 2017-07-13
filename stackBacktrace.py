@@ -91,7 +91,6 @@ backtrace = InitBacktrace(sys.argv[2])
 code_start = symb_arr[0][1]
 code_end = symb_arr[-1][1]
 
-
 # print '0x%x, 0x%x' % (code_start, code_end)
 symb_arr_addr = [ e[1] for e in symb_arr ]
 for frame in backtrace:
