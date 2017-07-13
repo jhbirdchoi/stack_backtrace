@@ -47,7 +47,7 @@ def InitSymbArr(file):
 	symb_arr = []  # [[name, addr, size]...]
 	for line in fd.readlines():
 		if not line: continue
-		if line.find('ARM Code') != -1:
+		if line.find('ARM Code') != -1 or line.find('Thumb Code') != -1:
 			parts = line.split()
 			if len(parts) == 6:
 				name = parts[0]
