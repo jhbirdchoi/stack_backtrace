@@ -58,12 +58,12 @@ def InitSymbArr(file):
 				continue
 
 	symb_arr.sort(key=lambda x:x[1])
-	start = 0
-	for e in symb_arr:
-		if e[0] == '__main':
-			break
-		start += 1
-	del symb_arr[:start]
+#	start = 0
+#	for e in symb_arr:
+#		if e[0] == '__main':
+#			break
+#		start += 1
+#	del symb_arr[:start]
 	return symb_arr
 
 def InitBacktrace(file):
