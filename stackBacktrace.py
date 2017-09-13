@@ -54,7 +54,14 @@ def InitSymbArr(file):
 				addr = parts[1]
 				size = parts[4]
 				symb_arr.append([name, int(addr, 16), int(size, 16)])
-			else:
+		elif line.find('Data') != -1:
+			parts = line.split()
+			if len(parts) == 5:
+				name = parts[0]
+				addr = parts[1]
+				size = parts[3]
+				symb_arr.append([name, int(addr, 16), int(size, 16)])
+		else:
 				continue
 
 	symb_arr.sort(key=lambda x:x[1])
